@@ -1,0 +1,3 @@
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/MatrixTemplate.dir
