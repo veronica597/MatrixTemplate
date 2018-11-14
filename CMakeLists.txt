@@ -3,5 +3,5 @@ project(MatrixTemplate)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp Matrix.h)
 add_executable(MatrixTemplate ${SOURCE_FILES})

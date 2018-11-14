@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/Matrix.h">
+			<Option target="MatrixTemplate"/>
+		</Unit>
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/main.cpp">
 			<Option target="MatrixTemplate"/>
 		</Unit>
