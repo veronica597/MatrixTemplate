@@ -5,7 +5,7 @@
 		<Option title="MatrixTemplate"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\testDirectory\;CMake Files\testDirectory\lib\;CMake Files\testDirectory\lib\googletest\;CMake Files\testDirectory\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug"/>
@@ -77,6 +77,138 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="runAllTests">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 runAllTests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runAllTests/fast">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 runAllTests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/include"/>
+					<Add directory="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/Matrix.h">
 			<Option target="MatrixTemplate"/>
@@ -84,8 +216,29 @@
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/main.cpp">
 			<Option target="MatrixTemplate"/>
 		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/MatrixTests.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/runAllTests.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\testDirectory\"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\testDirectory\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\testDirectory\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

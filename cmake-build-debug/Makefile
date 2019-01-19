@@ -123,6 +123,45 @@ MatrixTemplate/fast:
 	$(MAKE) -f CMakeFiles/MatrixTemplate.dir/build.make CMakeFiles/MatrixTemplate.dir/build
 .PHONY : MatrixTemplate/fast
 
+#=============================================================================
+# Target rules for targets named runAllTests
+
+# Build rule for target.
+runAllTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runAllTests
+.PHONY : runAllTests
+
+# fast build rule for target.
+runAllTests/fast:
+	$(MAKE) -f testDirectory/CMakeFiles/runAllTests.dir/build.make testDirectory/CMakeFiles/runAllTests.dir/build
+.PHONY : runAllTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f testDirectory/lib/googletest/CMakeFiles/gtest_main.dir/build.make testDirectory/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f testDirectory/lib/googletest/CMakeFiles/gtest.dir/build.make testDirectory/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +198,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MatrixTemplate"
+	@echo "... runAllTests"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

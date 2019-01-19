@@ -1,3 +1,10 @@
 /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles/MatrixTemplate.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/CMakeFiles/rebuild_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/CMakeFiles/edit_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/CMakeFiles/runAllTests.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/CMakeFiles/rebuild_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/CMakeFiles/edit_cache.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/CMakeFiles/gtest_main.dir
+/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/testDirectory/lib/googletest/CMakeFiles/gtest.dir
