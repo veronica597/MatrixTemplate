@@ -129,7 +129,7 @@ testDirectory/CMakeFiles/runAllTests.dir/all: testDirectory/lib/googletest/CMake
 testDirectory/CMakeFiles/runAllTests.dir/all: testDirectory/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f testDirectory/CMakeFiles/runAllTests.dir/build.make testDirectory/CMakeFiles/runAllTests.dir/depend
 	$(MAKE) -f testDirectory/CMakeFiles/runAllTests.dir/build.make testDirectory/CMakeFiles/runAllTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target runAllTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10 "Built target runAllTests"
 .PHONY : testDirectory/CMakeFiles/runAllTests.dir/all
 
 # Include target in all.
@@ -139,7 +139,7 @@ all: testDirectory/CMakeFiles/runAllTests.dir/all
 
 # Build rule for subdir invocation for target.
 testDirectory/CMakeFiles/runAllTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 testDirectory/CMakeFiles/runAllTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/veronicapecchioli/ClionProjects/MatrixTemplate/cmake-build-debug/CMakeFiles 0
 .PHONY : testDirectory/CMakeFiles/runAllTests.dir/rule

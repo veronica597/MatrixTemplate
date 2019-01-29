@@ -12,7 +12,6 @@
 #include <cstdlib>
 using namespace std;
 
-
 template <typename T>
 class Matrix{
 
@@ -22,11 +21,10 @@ private:
     T *M;
 
 public:
-
-  Matrix(int row,int col) throw(out_of_range); // costruttore per matrici rettangolari
-  explicit Matrix(int size) throw(out_of_range);  // costruttore per quadrate
-  Matrix (int rows, int col, const vector<T>& v)throw(out_of_range); // costruttore con vettore di valori da inserire nella matrice
-  Matrix (int size, const vector <T>&v) throw(out_of_range);
+  Matrix(int row,int col) throw(invalid_argument); // costruttore per matrici rettangolari
+  explicit Matrix(int size) throw(invalid_argument);  // costruttore per quadrate
+  Matrix (int rows, int col, const vector<T>& v)throw(invalid_argument); // costruttore con vettore di valori da inserire nella matrice
+  Matrix (int size, const vector <T>&v) throw(invalid_argument);
   Matrix(const Matrix<T>& Matrix); // costruttore di copia
   virtual ~ Matrix();
 
@@ -42,8 +40,8 @@ public:
   T det() const throw(invalid_argument);
   Matrix <T> select_row(int row) throw(out_of_range); // seleziona una riga
   Matrix <T> select_column (int column) throw(out_of_range); // seleziona una colonna
-  Matrix <T> operator *(Matrix <T> &m1) throw (out_of_range); // prodotto.
-  Matrix <T> operator +(const Matrix <T>& m1)throw (out_of_range); // somma
+  Matrix <T> operator *(Matrix <T> &m1) throw (invalid_argument); // prodotto.
+  Matrix <T> operator +(const Matrix <T>& m1)throw (invalid_argument); // somma
 
 };
 
@@ -51,9 +49,9 @@ public:
 
 
 template <typename T>
-Matrix <T>::Matrix(int row, int col) throw (out_of_range): rows(row), col(col){
+Matrix <T>::Matrix(int row, int col) throw (invalid_argument): rows(row), col(col){
     if (row <= 0 || col <= 0)
-        throw out_of_range ("Index error");
+        throw invalid_argument ("Index error");
 
     M = new T [row * col];
     for (int i=0; i<row * col;i++)
@@ -61,9 +59,9 @@ Matrix <T>::Matrix(int row, int col) throw (out_of_range): rows(row), col(col){
 }
 
 template <typename T>
-Matrix<T>::Matrix(int size) throw(out_of_range): rows(size), col(size) {
+Matrix<T>::Matrix(int size) throw(invalid_argument): rows(size), col(size) {
     if (rows <= 0 || col <= 0)
-        throw out_of_range ("Index error");
+        throw invalid_argument ("Index error");
 
     M = new T [rows * col];
     for (int i=0; i<rows*col;i++)
@@ -165,9 +163,9 @@ void Matrix<T>::setValue(int row, int column, T value)throw (out_of_range){
 }
 
 template<typename T>
-Matrix<T> Matrix<T>::operator+(const Matrix<T> &m1)throw(out_of_range){
+Matrix<T> Matrix<T>::operator+(const Matrix<T> &m1)throw(invalid_argument){
     if (this->rows != m1.rows || this->col != m1.col)
-        throw out_of_range ("size error");
+        throw invalid_argument ("size error");
 
     Matrix <T> sum(rows,col);
     for (int i=0; i< rows * col; i++)
@@ -177,9 +175,9 @@ Matrix<T> Matrix<T>::operator+(const Matrix<T> &m1)throw(out_of_range){
 }
 
 template<typename T>
-Matrix<T> Matrix<T>::operator*(Matrix<T> &m1) throw (out_of_range){ // implemento prodotto riga per colonna
+Matrix<T> Matrix<T>::operator*(Matrix<T> &m1) throw (invalid_argument){ // implemento prodotto riga per colonna
     if (col != m1.rows)
-        throw out_of_range ("size error for product");
+        throw invalid_argument ("size error for product");
 
     Matrix <T> prod(rows,m1.col);
     for(int i=0; i<rows; i++)
@@ -215,26 +213,26 @@ Matrix<T> Matrix<T>::Gauss() const throw (invalid_argument){ // implementazione 
 }
 
 template<typename T>
-Matrix<T>::Matrix(int rows,int col, const vector<T>& v) throw(out_of_range): rows(rows), col(col){
+Matrix<T>::Matrix(int rows,int col, const vector<T>& v) throw(invalid_argument): rows(rows), col(col){
     if (rows <= 0 || col <=0)
-        throw out_of_range("invalid rows and cols");
+        throw invalid_argument("invalid rows and cols");
     M = new T [rows * col];
 
     if (v.size() != rows*col)
-        throw out_of_range(" Matrix size is different to vector size");
+        throw invalid_argument(" Matrix size is different to vector size");
 
     for (int i =0; i<rows*col; i++)
         M[i]= v[i];
 }
 
 template<typename T>
-Matrix<T>::Matrix(int size, const vector<T> &v) throw(out_of_range): rows(size), col(size){
+Matrix<T>::Matrix(int size, const vector<T> &v) throw(invalid_argument): rows(size), col(size){
     if (rows <= 0 || col <=0)
-        throw out_of_range("invalid size of rows and cols");
+        throw invalid_argument("invalid size of rows and cols");
     M = new T[rows*col];
 
     if (v.size() != rows * col)
-        throw out_of_range(" Matrix size is different to vector size");
+        throw invalid_argument(" Matrix size is different to vector size");
 
     for (int i = 0; i<rows*col; i++)
             M[i] = v[i];
@@ -244,7 +242,7 @@ Matrix<T>::Matrix(int size, const vector<T> &v) throw(out_of_range): rows(size),
 template<typename T>
 int Matrix<T>::rank() const {
 
-    int rank = col; // variabile per memorizzare il rango. Inizializzo  al numero totale delle colonne
+    int rank = col; // variabile per memorizzare il rango. Inizializzo al numero totale delle colonne
     Matrix<T> M_rank(*this);
     float m=0;
 

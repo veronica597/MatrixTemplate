@@ -3,8 +3,6 @@
 using namespace std;
 
 
-
-
 int main() {
 
     Matrix<float> M1(2, {1, 3, 0, 7});
@@ -110,7 +108,4 @@ int main() {
         }
         cout << endl;
     }
-
 }
-
-

@@ -219,6 +219,9 @@
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/MatrixTests.cpp">
 			<Option target="runAllTests"/>
 		</Unit>
+		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/OperationsTests.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
 		<Unit filename="/Users/veronicapecchioli/ClionProjects/MatrixTemplate/testDirectory/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
