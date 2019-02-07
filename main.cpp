@@ -108,4 +108,31 @@ int main() {
         }
         cout << endl;
     }
+
+    Matrix<float> M8= M2*2;
+    cout << "M8 = " << endl;
+    for (int i = 0; i < M8.get_rows(); i++) {
+        cout << "  ";
+        for (int j = 0; j < M8.get_col(); j++) {
+            cout << M8.getValue(i, j) << " ";
+        }
+        cout << endl;
+    }
+
+    Matrix<float> M9=M1;
+    cout << "M9 = " << endl;
+    for (int i = 0; i < M9.get_rows(); i++) {
+        cout << "  ";
+        for (int j = 0; j < M9.get_col(); j++) {
+            cout << M9.getValue(i, j) << " ";
+        }
+        cout << endl;
+    }
+
+    if( M2==M5)
+        cout<<"M2 e M5 sono matrici identiche"<<endl;
+    else
+        cout<<"M2 e M5 sono matrici diverse"<<endl;
 }
+
+

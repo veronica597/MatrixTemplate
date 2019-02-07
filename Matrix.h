@@ -24,13 +24,13 @@ public:
   Matrix(int row,int col) throw(invalid_argument); // costruttore per matrici rettangolari
   explicit Matrix(int size) throw(invalid_argument);  // costruttore per quadrate
   Matrix (int rows, int col, const vector<T>& v)throw(invalid_argument); // costruttore con vettore di valori da inserire nella matrice
-  Matrix (int size, const vector <T>&v) throw(invalid_argument);
+  Matrix (int size, const vector <T>& v) throw(invalid_argument);
   Matrix(const Matrix<T>& Matrix); // costruttore di copia
   virtual ~ Matrix();
 
   int get_col() const ; // n colonne
   int get_rows()const; // n righe
-  T& getValue(int row,int column) throw (out_of_range);
+  T getValue(int row,int column) throw (out_of_range);
   void setValue(int row,int column,const T value)throw (out_of_range);
   Matrix<T>& trasponse();
   Matrix<T> Gauss() const throw (invalid_argument);
@@ -41,6 +41,10 @@ public:
   Matrix <T> select_row(int row) throw(out_of_range); // seleziona una riga
   Matrix <T> select_column (int column) throw(out_of_range); // seleziona una colonna
   Matrix <T> operator *(Matrix <T> &m1) throw (invalid_argument); // prodotto.
+
+  Matrix <T> operator *(const T value); // prodotto per scalare
+  Matrix <T>& operator =(const Matrix<T> &m1); // assegnamento
+  bool operator ==(const Matrix<T> &m1) const; // uguaglianza
   Matrix <T> operator +(const Matrix <T>& m1)throw (invalid_argument); // somma
 
 };
@@ -149,7 +153,7 @@ T Matrix<T>::max() const {
 }
 
 template<typename T>
-T &Matrix<T>::getValue(int row, int column)throw(out_of_range){
+T Matrix<T>::getValue(int row, int column)throw(out_of_range){
     if (row<0 || row >= rows || col<0 || column >= col)
         throw out_of_range ("index error");
     return M [row * col + column];
@@ -289,5 +293,40 @@ T Matrix<T>::det() const throw(invalid_argument) {
     }
     return det;
 }
+
+template<typename T>
+Matrix<T> Matrix<T>::operator*(const T value) {
+    Matrix <T> prod(rows,col);
+    for(int i=0; i<rows*col; i++)
+            prod.M[i] = M[i] * value;
+    return prod;
+
+}
+
+template<typename T>
+bool Matrix<T>::operator==(const Matrix<T> &m1) const {
+    if (this->rows != m1.rows || this->col != m1.col)
+        return false;
+    for (int i = 0; i < rows*col ; i++)
+        if (this->M[i] != m1.M[i])
+            return false;
+
+    return true;
+    }
+
+template<typename T>
+Matrix<T>& Matrix<T>::operator=(const Matrix<T> &m1) {
+
+    this ->rows = m1.rows;
+    this ->col  = m1.col;
+
+    delete[] M;
+    M = new T[rows*col];
+    for (int i = 0; i < rows; i++)
+        M[i] = m1.M[i];
+
+    return *this;
+}
+
 
 #endif //MATRIXTEMPLATE_MATRIX_H
