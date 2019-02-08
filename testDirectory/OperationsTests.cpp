@@ -93,6 +93,39 @@ TEST_F(MatrixOperations,MulException){
     ASSERT_THROW(A*m,invalid_argument);
 }
 
+TEST_F(MatrixOperations,NotEgual){
+    ASSERT_FALSE(A==B);
+    ASSERT_TRUE(A != B);
+}
+
+TEST_F(MatrixOperations,Assignment){
+    Matrix<int>m=B;
+    ASSERT_EQ(m.getValue(0,0),B.getValue(0,0));
+    ASSERT_EQ(m.getValue(0,1),B.getValue(0,1));
+    ASSERT_EQ(m.getValue(0,2),B.getValue(0,2));
+    ASSERT_EQ(m.getValue(1,0),B.getValue(1,0));
+    ASSERT_EQ(m.getValue(1,1),B.getValue(1,1));
+    ASSERT_EQ(m.getValue(1,2),B.getValue(1,2));
+    ASSERT_EQ(m.getValue(2,0),B.getValue(2,0));
+    ASSERT_EQ(m.getValue(2,1),B.getValue(2,1));
+    ASSERT_EQ(m.getValue(2,2),B.getValue(2,2));
+}
+
+TEST_F(MatrixOperations,ScalarProduct){
+    Matrix<int>m(3,3,{2,4,6,8,10,12,14,16,18});
+    Matrix<int>prod=A*2;
+
+    ASSERT_EQ(m.getValue(0,0),prod.getValue(0,0));
+    ASSERT_EQ(m.getValue(0,1),prod.getValue(0,1));
+    ASSERT_EQ(m.getValue(0,2),prod.getValue(0,2));
+    ASSERT_EQ(m.getValue(1,0),prod.getValue(1,0));
+    ASSERT_EQ(m.getValue(1,1),prod.getValue(1,1));
+    ASSERT_EQ(m.getValue(1,2),prod.getValue(1,2));
+    ASSERT_EQ(m.getValue(2,0),prod.getValue(2,0));
+    ASSERT_EQ(m.getValue(2,1),prod.getValue(2,1));
+    ASSERT_EQ(m.getValue(2,2),prod.getValue(2,2));
+}
+
 TEST_F(MatrixOperations,Det){
     Matrix<float>m(3,3,{1,3,5,7,8,9,11,2,14});
 

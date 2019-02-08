@@ -45,6 +45,7 @@ public:
   Matrix <T> operator *(const T value); // prodotto per scalare
   Matrix <T>& operator =(const Matrix<T> &m1); // assegnamento
   bool operator ==(const Matrix<T> &m1) const; // uguaglianza
+  bool operator !=(const Matrix<T>& m1) const; // diversità
   Matrix <T> operator +(const Matrix <T>& m1)throw (invalid_argument); // somma
 
 };
@@ -326,6 +327,17 @@ Matrix<T>& Matrix<T>::operator=(const Matrix<T> &m1) {
         M[i] = m1.M[i];
 
     return *this;
+}
+
+template<typename T>
+bool Matrix<T>::operator !=(const Matrix<T> &m1) const {
+    if (this->rows != m1.rows || this->col != m1.col)
+        return true;
+    for (int i = 0; i < rows*col ; i++)
+        if (this->M[i] != m1.M[i])
+            return true;
+
+    return false;
 }
 
 
