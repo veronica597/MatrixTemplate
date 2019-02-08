@@ -317,27 +317,23 @@ bool Matrix<T>::operator==(const Matrix<T> &m1) const {
 
 template<typename T>
 Matrix<T>& Matrix<T>::operator=(const Matrix<T> &m1) {
+    if (*this==m1)
+        return *this;
+    else {
+        this->rows = m1.rows;
+        this->col = m1.col;
 
-    this ->rows = m1.rows;
-    this ->col  = m1.col;
-
-    delete[] M;
-    M = new T[rows*col];
-    for (int i = 0; i < rows; i++)
-        M[i] = m1.M[i];
-
+        delete[] M;
+        M = new T[rows * col];
+        for (int i = 0; i < rows; i++)
+            M[i] = m1.M[i];
+    }
     return *this;
 }
 
 template<typename T>
 bool Matrix<T>::operator !=(const Matrix<T> &m1) const {
-    if (this->rows != m1.rows || this->col != m1.col)
-        return true;
-    for (int i = 0; i < rows*col ; i++)
-        if (this->M[i] != m1.M[i])
-            return true;
-
-    return false;
+    return !(*this == m1);
 }
 
 

@@ -129,6 +129,8 @@ int main() {
         cout << endl;
     }
 
+    M2=M2;
+
     if( M2==M5)
         cout<<"M2 e M5 sono matrici identiche"<<endl;
     else
